@@ -1,7 +1,7 @@
 {
   "name":           "uupaa.json.js",
-  "version":        "0.8.1",
-  "description":    "",
+  "version":        "0.8.2",
+  "description":    "JSON formatter.",
   "url":            "https://github.com/uupaa/JSON.js",
   "keywords":       ["JSON", "util", "uupaa"],
   "repository": {
