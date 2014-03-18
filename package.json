@@ -1,6 +1,6 @@
 {
   "name":           "uupaa.json.js",
-  "version":        "0.8.0",
+  "version":        "0.8.1",
   "description":    "",
   "url":            "https://github.com/uupaa/JSON.js",
   "keywords":       ["JSON", "util", "uupaa"],
@@ -9,17 +9,16 @@
     "url":          "https://github.com/uupaa/JSON.js.git"
   },
   "scripts": {
-    "watch":        "node node_modules/uupaa.watch.js --verbose --action build ./lib/JSON.js",
-    "build":        "node node_modules/uupaa.minify.js --keep --option 'formatting pretty_print' --output ./lib/JSON.min.js ./lib/JSON.js",
-    "build-release":"node node_modules/uupaa.minify.js --module all --output ./lib/JSON.min.js",
+    "watch":        "node node_modules/uupaa.watch.js --verbose --action build",
+    "build":        "node node_modules/uupaa.minify.js --verbose --strict --keep --pretty",
+    "build-simple": "node node_modules/uupaa.minify.js --verbose --strict --keep --pretty --nowrap --simple",
+    "build-release":"node node_modules/uupaa.minify.js --verbose --strict --module",
     "test":         "NODE_ENV=production NODE_PATH=lib node --harmony test/index.node.js; open test/index.html",
-    "lint":         "node lint/plato.js; open lint/plato/index.html"
+    "lint":         "node node_modules/uupaa.plato.js; open lint/plato/index.html"
   },
-  "build": {
-    "all": { "lib/JSON.js": "" },
-    "node": { },
-    "worker": { },
-    "browser": { }
+  "x-build": {
+    "inputs":       ["lib/JSON.js"],
+    "output":       "lib/JSON.min.js"
   },
   "dependencies": {
   },
@@ -29,6 +28,7 @@
     "uupaa.task.js":    "",
     "uupaa.test.js":    "",
     "uupaa.watch.js":   "",
+    "uupaa.plato.js":   "",
     "uupaa.minify.js":  ""
   },
   "lib":            "./lib/",

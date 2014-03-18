@@ -1,7 +1,7 @@
 JSON.js
 =========
 
-Module template.
+JSON formatter.
 
 # Document
 
@@ -10,7 +10,7 @@ https://github.com/uupaa/JSON.js/wiki/JSON
 # How to use
 
 ```sh
-$ node JSON.js [--output output-json-file] [--nopretty] [--nosort] input-json-file
+$ node JSON.js [--help] [--verbose] [--output output-json-file] [--nopretty] [--nosort] input-json-file
 ```
 
 # for Developers

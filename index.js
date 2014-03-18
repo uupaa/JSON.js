@@ -1,2 +1,2 @@
-module.exports = require("./lib/JSON");
+module.exports = require("./bin/JSON");
 
