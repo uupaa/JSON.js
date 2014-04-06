@@ -1,9 +1,9 @@
 {
   "name":           "uupaa.json.js",
-  "version":        "0.8.2",
+  "version":        "0.8.3",
   "description":    "JSON formatter.",
   "url":            "https://github.com/uupaa/JSON.js",
-  "keywords":       ["JSON", "util", "uupaa"],
+  "keywords":       ["JSON", "util", "uupaa", "WebModule"],
   "repository": {
     "type":         "git",
     "url":          "https://github.com/uupaa/JSON.js.git"
@@ -18,11 +18,12 @@
   },
   "x-build": {
     "inputs":       ["lib/JSON.js"],
-    "output":       "lib/JSON.min.js"
+    "output":       "release/JSON.min.js"
   },
   "dependencies": {
   },
   "devDependencies": {
+    "uupaa.console.js": "",
     "uupaa.valid.js":   "",
     "uupaa.help.js":    "",
     "uupaa.task.js":    "",

@@ -1,16 +1,17 @@
 #!/usr/bin/env node
 
-var _USAGE = '\n' +
-'   Usage:\n' +
-'       node JSON.js [--help]\n' +
-'                    [--verbose]\n' +
-'                    [--output output-json-file]\n' +
-'                    [--nopretty]\n' +
-'                    [--nosort]\n' +
-'                    input-output-json-file\n' +
-'\n'+
-'   See:\n'+
-'       https://github.com/uupaa/JSON.js/wiki/JSON\n';
+var _USAGE = _multiline(function() {/*
+    Usage:
+        node JSON.js [--help]
+                     [--verbose]
+                     [--output output-json-file]
+                     [--nopretty]
+                     [--nosort]
+                     input-output-json-file
+
+    See:
+        https://github.com/uupaa/JSON.js/wiki/JSON
+*/});
 
 var _CONSOLE_COLOR = {
         RED:    "\u001b[31m",
@@ -88,5 +89,10 @@ function _parseCommandLineOptions(argv,      // @arg CommandlineOptionsArray: ar
         }
     }
     return options;
+}
+
+function _multiline(fn) { // @arg Function:
+                          // @ret String:
+    return (fn + "").split("\n").slice(1, -1).join("\n");
 }
 
