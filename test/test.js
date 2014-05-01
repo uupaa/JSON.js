@@ -1,18 +1,17 @@
-new Test().add([
-        testJSON,
-    ]).run(function(err, test) {
-        if (1) {
-            err || test.worker(function(err, test) {
-                if (!err && typeof JSON_ !== "undefined") {
-                    var name = Test.swap(JSON, JSON_);
+var ModuleTest = (function(global) {
 
-                    new Test(test).run(function(err, test) {
-                        Test.undo(name);
-                    });
-                }
-            });
-        }
-    });
+return new Test({
+        disable:    false,
+        node:       true,
+        browser:    true,
+        worker:     true,
+        button:     true,
+        both:       true,
+        primary:    global["JSON"],
+        secondary:  global["JSON_"],
+    }).add([
+        testJSON,
+    ]).run().clone();
 
 function testJSON(next) {
 
@@ -24,4 +23,6 @@ function testJSON(next) {
         next && next.miss();
     }
 }
+
+})((this || 0).self || global);
 
