@@ -1,14 +1,12 @@
-var ModuleTest = (function(global) {
+var ModuleTestJSON = (function(global) {
 
-return new Test({
+return new Test("JSON", {
         disable:    false,
-        node:       true,
         browser:    true,
         worker:     true,
+        node:       true,
         button:     true,
         both:       true,
-        primary:    global["JSON"],
-        secondary:  global["JSON_"],
     }).add([
         testJSON,
     ]).run().clone();
@@ -16,10 +14,8 @@ return new Test({
 function testJSON(next) {
 
     if (true) {
-        console.log("testJSON ok");
         next && next.pass();
     } else {
-        console.log("testJSON ng");
         next && next.miss();
     }
 }
